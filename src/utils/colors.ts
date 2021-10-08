@@ -1,7 +1,7 @@
 import { sleep } from "./sleep";
 import type { Bar, Color } from "../types";
 
-const time = 100;
+const time = 10;
 
 function changeColor(color: Color) {
   return async (...items: Bar[]) => {
