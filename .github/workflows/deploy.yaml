@@ -34,7 +34,7 @@ jobs:
         NODE_ENV: ${{ secrets.NODE_ENV }}
 
   deploy:
-    needs: [build]
+    needs: [test-and-build]
     runs-on: ubuntu-latest
 
     steps:
