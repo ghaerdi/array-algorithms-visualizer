@@ -29,6 +29,8 @@ jobs:
       with:
         name: dist
         path: dist
+      env:
+        NODE_ENV: production
 
   deploy:
     needs: [build]
