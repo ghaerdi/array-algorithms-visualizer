@@ -1,15 +1,42 @@
-import { bubblesort, quicksort } from "../../src/utils/algorithms";
-import { Collection } from "../../src/utils/collection";
+import {
+  bubblesort,
+  insertionsort,
+  quicksort,
+  selectionsort,
+} from "../../src/utils/algorithms";
 import { toCollection } from "../../src/utils/toCollection";
-import { range, shuffle } from '../../src/utils/array';
-import type { Counter } from "../../src/types";
+import { range, shuffle } from "../../src/utils/array";
 
 const numbers = shuffle(range(5));
 
 describe("Bubble sort", () => {
-	it("organize array", async () => {
-		const collection = toCollection(numbers);
-		await quicksort(collection, { steps: 0 });
-		expect(collection.map(el => el.value)).toEqual([0, 1, 2, 3, 4]);
-	})
-})
+  it("organize array", async () => {
+    const collection = toCollection(numbers);
+    await bubblesort(collection, { steps: 0 });
+    expect(collection.map((el) => el.value)).toEqual([0, 1, 2, 3, 4]);
+  });
+});
+
+describe("Selection sort", () => {
+  it("organize array", async () => {
+    const collection = toCollection(numbers);
+    await selectionsort(collection, { steps: 0 });
+    expect(collection.map((el) => el.value)).toEqual([0, 1, 2, 3, 4]);
+  });
+});
+
+describe("Insertion sort", () => {
+  it("organize array", async () => {
+    const collection = toCollection(numbers);
+    await insertionsort(collection, { steps: 0 });
+    expect(collection.map((el) => el.value)).toEqual([0, 1, 2, 3, 4]);
+  });
+});
+
+describe("Quick sort", () => {
+  it("organize array", async () => {
+    const collection = toCollection(numbers);
+    await quicksort(collection, { steps: 0 });
+    expect(collection.map((el) => el.value)).toEqual([0, 1, 2, 3, 4]);
+  });
+});
