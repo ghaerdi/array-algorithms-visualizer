@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { range, shuffle } from "../utils/array";
 import { ref } from "vue";
-import type { Bar as IBar } from "../types";
-import { Collection } from "../utils/collection";
+import { toCollection } from "../utils/toCollection";
 import Bar from "../components/Bar.vue";
 import AlgorithmMenu from "../components/AlgorithmMenu.vue";
 import Counter from "../components/Counter.vue";
@@ -11,12 +10,6 @@ const len = 500;
 const numbers = shuffle(range(len));
 const collection = ref(toCollection(numbers));
 const counter = ref({ steps: 0 });
-
-function toCollection(arr: number[]): Collection<IBar> {
-  const toBar = (value: number) => ({ value, color: "default" } as IBar);
-  const obj: IBar[] = arr.map(toBar);
-  return new Collection(...obj);
-}
 </script>
 
 <template>
