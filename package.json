@@ -4,9 +4,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "deploy": "sh deploy.sh"
   },
   "dependencies": {
+    "dotenv": "^10.0.0",
     "vue": "^3.2.13"
   },
   "devDependencies": {

@@ -10,8 +10,7 @@ npm run build
 cd dist
 
 git init
-git add -A
-git commit -m 'deploy'
-git push -f git@github.com:ghaerdi/array-algorithms-visualizer.git main:gh-pages
+git commit -am 'deploy'
+git push -f https://github.com/ghaerdi/array-algorithms-visualizer.git gh-pages
 
 cd -
