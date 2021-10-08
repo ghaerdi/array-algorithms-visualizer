@@ -27,7 +27,7 @@ jobs:
     - name: Upload Artifacts 🔺
       uses: actions/upload-artifact@v1
       with:
-        name: dist
+        name: production
         path: dist
       env:
         NODE_ENV: production
@@ -49,5 +49,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
-          branch: gh-pages
+          branch: production
           folder: "dist"
