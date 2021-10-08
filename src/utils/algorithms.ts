@@ -11,7 +11,7 @@ export async function bubblesort(arr: Collection<Bar>, counter: Counter) {
         counter.steps++;
       }
 
-      await toDefault(arr[j], arr[j + 1]);
+      toDefault(...arr);
       counter.steps++;
     }
   }

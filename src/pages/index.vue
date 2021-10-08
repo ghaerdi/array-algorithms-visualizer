@@ -6,7 +6,7 @@ import Bar from "../components/Bar.vue";
 import AlgorithmMenu from "../components/AlgorithmMenu.vue";
 import Counter from "../components/Counter.vue";
 
-const len = 500;
+const len = 200;
 const numbers = shuffle(range(len));
 const collection = ref(toCollection(numbers));
 const counter = ref({ steps: 0 });
