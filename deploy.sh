@@ -12,6 +12,6 @@ cd dist
 git init
 git add -A
 git commit -m 'deploy'
-git push -f git@github.com:ghaerdi/array-algorithms-visualizer.git master:gh-pages
+git push -f git@github.com:ghaerdi/array-algorithms-visualizer.git main:gh-pages
 
 cd -
