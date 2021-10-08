@@ -1,10 +1,9 @@
 <script setup lang="ts">
+import type { Counter } from "../types";
 import { defineProps } from "@vue/runtime-core";
 
 interface Props {
-  counter: {
-    steps: number;
-  };
+  counter: Counter;
 }
 
 defineProps<Props>();
