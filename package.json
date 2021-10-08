@@ -8,7 +8,6 @@
     "deploy": "sh deploy.sh"
   },
   "dependencies": {
-    "dotenv": "^10.0.0",
     "vue": "^3.2.13"
   },
   "devDependencies": {

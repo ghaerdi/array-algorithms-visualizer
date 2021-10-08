@@ -1,15 +1,12 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import dotenv from "dotenv";
 
-if (process.env.NODE_ENV !== "production") {
-  dotenv.config();
-}
+const { NODE_ENV } = process.env;
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  base: process.env.VITE_ENV === "dev"
-    ? "/"
-    : "https://ghaerdi.github.io/array-algorithms-visualizer/",
+  base: NODE_ENV === "production"
+    ? "https://ghaerdi.github.io/array-algorithms-visualizer/"
+    : "/",
 });
