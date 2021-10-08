@@ -13,7 +13,7 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 
 ## Commands
 
-`npm run dev`: run the project and start to code with hot-reloading.
+`npm run dev` run the project and start to code with hot-reloading.
 
 `npm run build` build for production
 
