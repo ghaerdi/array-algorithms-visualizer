@@ -50,4 +50,4 @@ jobs:
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
           branch: production
-          folder: "dist"
+          folder: dist
