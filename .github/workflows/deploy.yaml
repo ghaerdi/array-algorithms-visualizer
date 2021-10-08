@@ -30,7 +30,7 @@ jobs:
         name: dist
         path: dist
       env:
-        NODE_ENV: production
+        NODE_ENV: ${{ secrets.NODE_ENV }}
 
   deploy:
     needs: [build]
