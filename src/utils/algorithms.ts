@@ -5,8 +5,6 @@ export async function bubblesort(arr: Collection<Bar>, counter: Counter) {
   for (const [i, _] of arr.entries()) {
     for (let j = 0; j < arr.length - i - 1; j++) {
       if (j === arr.length - 1) continue;
-      await toCheck(arr[j], arr[j + 1]);
-
       if (arr[j].value > arr[j + 1].value) {
         await toHighlight(arr[j], arr[j + 1]);
         arr.swap(j, j + 1);
@@ -17,49 +15,47 @@ export async function bubblesort(arr: Collection<Bar>, counter: Counter) {
       counter.steps++;
     }
   }
+  toCheck(...arr);
 }
 
 export async function insertionsort(arr: Collection<Bar>, counter: Counter) {
   for (const [i, _] of arr.entries()) {
     let j = i;
-    await toCheck(arr[j], arr[j ? j - 1 : 0]);
     while (j > 0 && arr[j].value < arr[j - 1].value) {
       await toHighlight(arr[j], arr[j ? j - 1 : 0]);
+      toDefault(...arr);
       arr.swap(j, j - 1);
-      await toDefault(arr[j], arr[j ? j - 1 : 0]);
       j--;
       counter.steps++;
     }
-    await toDefault(arr[j], arr[j ? j - 1 : 0]);
     counter.steps++;
   }
-  return arr;
+  toCheck(...arr)
 }
 
 export async function selectionsort(arr: Collection<Bar>, counter: Counter) {
   for (let [i, _] of arr.entries()) {
     let min = i;
     for (let j = i + 1; j < arr.length; j++) {
-      await toCheck(arr[j], arr[min]);
       if (arr[j].value < arr[min].value) {
         min = j;
       }
       counter.steps++;
     }
     if (min !== i) {
-      await toCheck(arr[i], arr[min]);
       await toHighlight(arr[i], arr[min]);
       arr.swap(i, min);
       counter.steps++;
     }
-    await toDefault(...arr);
+    toDefault(...arr);
     counter.steps++;
   }
-  return arr;
+  toCheck(...arr);
 }
 
-export function quicksort(arr: Collection<Bar>, counter: Counter) {
-  _quicksort(arr, 0, arr.length - 1, counter);
+export async function quicksort(arr: Collection<Bar>, counter: Counter) {
+  await _quicksort(arr, 0, arr.length - 1, counter);
+  toCheck(...arr);
 }
 
 async function _quicksort(
