@@ -1,6 +1,7 @@
 import {
   bubblesort,
   insertionsort,
+  // mergesort,
   quicksort,
   selectionsort,
 } from "../../src/utils/algorithms";
@@ -40,3 +41,11 @@ describe("Quick sort", () => {
     expect(collection.map((el) => el.value)).toEqual([0, 1, 2, 3, 4]);
   });
 });
+
+// describe("Merge sort", () => {
+//   it("organize array", async () => {
+//     const collection = toCollection(numbers);
+//     await mergesort(collection, { steps: 0 });
+//     expect(collection.map((el) => el.value)).toEqual([0, 1, 2, 3, 4]);
+//   });
+// });
