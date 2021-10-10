@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# test
+npm run test
+
+# format the code and commit it
+npm run format
+
+# commit the code when it's formatted
+git add .
+git diff --quiet && git diff --staged --quiet || git commit -m "format"
