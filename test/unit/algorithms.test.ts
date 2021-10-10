@@ -1,10 +1,8 @@
-import {
-  bubblesort,
-  insertionsort,
-  mergesort,
-  quicksort,
-  selectionsort,
-} from "../../src/utils/algorithms";
+import bubblesort from '../../src/algorithms/bubblesort';
+import selectionsort from '../../src/algorithms/bubblesort';
+import insertionsort from '../../src/algorithms/bubblesort';
+import quicksort from '../../src/algorithms/bubblesort';
+import mergesort from '../../src/algorithms/bubblesort';
 import { toCollection } from "../../src/utils/toCollection";
 import { range, shuffle } from "../../src/utils/array";
 

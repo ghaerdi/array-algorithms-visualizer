@@ -1,12 +1,10 @@
 <script setup lang="ts">
 import { toRefs, ref } from "vue";
-import {
-  bubblesort,
-  insertionsort,
-  selectionsort,
-  quicksort,
-  mergesort,
-} from "../utils/algorithms";
+import bubblesort from "../algorithms/bubblesort";
+import insertionsort from "../algorithms/insertionsort";
+import selectionsort from "../algorithms/selectionsort";
+import quicksort from "../algorithms/quicksort";
+import mergesort from "../algorithms/mergesort";
 import type { Collection, Bar, Counter } from "../types";
 import { toDefault } from "../utils/colors";
 
