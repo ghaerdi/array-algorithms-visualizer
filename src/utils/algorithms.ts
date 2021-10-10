@@ -63,7 +63,7 @@ async function _quicksort(
   arr: Collection<Bar>,
   low: number,
   high: number,
-  counter: Counter,
+  counter: Counter
 ) {
   if (low < high) {
     const pivot = await partition(arr, low, high, counter);
@@ -76,7 +76,7 @@ async function partition(
   arr: Collection<Bar>,
   low: number,
   high: number,
-  counter: Counter,
+  counter: Counter
 ) {
   const pivot = arr[high].value;
   let i = low;
@@ -106,7 +106,7 @@ export async function _mergesort(
   arr: Collection<Bar>,
   low: number,
   high: number,
-  counter: Counter,
+  counter: Counter
 ) {
   if (low >= high) return;
   const mid = Math.floor((low + high) / 2);
@@ -120,7 +120,7 @@ async function _sort(
   low: number,
   mid: number,
   high: number,
-  counter: Counter,
+  counter: Counter
 ) {
   const n1 = mid - low + 1;
   const n2 = high - mid;

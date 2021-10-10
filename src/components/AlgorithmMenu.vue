@@ -5,7 +5,7 @@ import {
   insertionsort,
   selectionsort,
   quicksort,
-  mergesort
+  mergesort,
 } from "../utils/algorithms";
 import type { Collection, Bar, Counter } from "../types";
 import { toDefault } from "../utils/colors";
@@ -47,8 +47,8 @@ const algorithms = ref([
     name: "Merge Sort",
     run() {
       mergesort(numbers.value, counter.value);
-    }
-  }
+    },
+  },
 ]);
 
 async function randomize(arr: Collection<Bar>) {
