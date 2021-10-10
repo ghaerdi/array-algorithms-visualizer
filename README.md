@@ -18,3 +18,13 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 `npm run build` build for production
 
 `npm run serve` run the build locally
+
+`npm run test` run test with jest
+
+`npm run format` format the code with prettier
+
+`npm run prepare` add git hooks from `.githooks` directory, this command also runs before `npm install`.
+
+## Githooks
+
+`pre-push` before pushing a branch: run test, format the code and do a new commit if code has changed after running prettier.
