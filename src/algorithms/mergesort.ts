@@ -2,7 +2,10 @@ import type { Bar, Counter } from "../types";
 import { Collection } from "../utils/collection";
 import { toCheck, toDefault, toHighlight } from "../utils/colors";
 
-export default async function mergesort(arr: Collection<Bar>, counter: Counter) {
+export default async function mergesort(
+  arr: Collection<Bar>,
+  counter: Counter
+) {
   await _mergesort(arr, 0, arr.length - 1, counter);
   toCheck(...arr);
 }

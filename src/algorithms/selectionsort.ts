@@ -2,7 +2,10 @@ import type { Bar, Counter } from "../types";
 import { Collection } from "../utils/collection";
 import { toCheck, toDefault, toHighlight } from "../utils/colors";
 
-export default async function selectionsort(arr: Collection<Bar>, counter: Counter) {
+export default async function selectionsort(
+  arr: Collection<Bar>,
+  counter: Counter
+) {
   for (let [i, _] of arr.entries()) {
     let min = i;
     for (let j = i + 1; j < arr.length; j++) {
