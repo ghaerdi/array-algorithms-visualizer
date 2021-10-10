@@ -30,7 +30,7 @@ export async function insertionsort(arr: Collection<Bar>, counter: Counter) {
     }
     counter.steps++;
   }
-  toCheck(...arr)
+  toCheck(...arr);
 }
 
 export async function selectionsort(arr: Collection<Bar>, counter: Counter) {
@@ -62,7 +62,7 @@ async function _quicksort(
   arr: Collection<Bar>,
   low: number,
   high: number,
-  counter: Counter,
+  counter: Counter
 ) {
   if (low < high) {
     const pivot = await partition(arr, low, high, counter);
@@ -75,7 +75,7 @@ async function partition(
   arr: Collection<Bar>,
   low: number,
   high: number,
-  counter: Counter,
+  counter: Counter
 ) {
   const pivot = arr[high].value;
   let i = low;

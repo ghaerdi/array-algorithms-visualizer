@@ -10,13 +10,12 @@ interface Props extends Bar {
 
 const props = defineProps<Props>();
 const { value, len } = toRefs(props);
-const size = 10 + value.value / (len.value/50);
+const size = 10 + value.value / (len.value / 50);
 const style = `height: ${size}vh`;
 </script>
 
 <template>
-  <div :class="'item ' + color" :style="style" :index="value">
-  </div>
+  <div :class="'item ' + color" :style="style" :index="value"></div>
 </template>
 
 <style lang="postcss" scoped>

@@ -11,7 +11,7 @@ export class Collection<T> extends Array<T> implements ICollection<T> {
     [this[i], this[j]] = [this[j], this[i]];
   }
 
-	shuffle(): void {
-		shuffle(this);
-	}
+  shuffle(): void {
+    shuffle(this);
+  }
 }
